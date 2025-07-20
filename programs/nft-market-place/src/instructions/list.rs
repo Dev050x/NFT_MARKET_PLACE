@@ -37,7 +37,7 @@ pub struct List<'info> {
     #[account(
         init,
         payer = maker,
-        associated_token::authority = maker,
+        associated_token::authority = listing,
         associated_token::mint = maker_mint,
     )]
     pub vault: InterfaceAccount<'info, TokenAccount>,
