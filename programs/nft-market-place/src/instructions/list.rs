@@ -24,7 +24,7 @@ pub struct List<'info> {
     #[account(
         init,
         payer = maker,
-        seeds = [b"marketplace".as_ref() , maker_mint.key().as_ref()],
+        seeds = [b"listing".as_ref() , maker_mint.key().as_ref(),b"v2"],
         bump,
         space = Listing::INIT_SPACE,
     )]
